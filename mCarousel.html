@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .carousel {
+      width: 750px;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .img-box {
+      width: 1000%;
+      height: 200px;
+      position: absolute;
+    }
+    .img-box li {
+      width: 750px;
+      height: 200px;
+      float: left;
+      font-size: 50px;
+    }
+    .img-box li.l1 {
+      background: green;
+    }
+    .img-box li.l2 {
+      background: blue;
+    }
+    .img-box li.l3 {
+      background: pink;
+    }
+    .img-box li.l4 {
+      background: red;
+    }
+    .points {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+    }
+    .points li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      text-align: center;
+      line-height: 20px;
+    }
+    .points li.now {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="carousel">
+  <ul class="img-box">
+    <li class="l1">1</li>
+    <li class="l2">2</li>
+    <li class="l3">3</li>
+    <li class="l4">4</li>
+  </ul>
+  <ol class="points">
+    <li class="now">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ol>
+</div>
+
+<script src="./js/carousel.js"></script>
+<script>
+  new Carousel({
+    container: '.carousel',
+    autoPlay: true,  // 设置是否自动播放      true: 自动,  false: 不自动(默认)
+    autoPlayTime: 2000  // 设置自动轮播时间
+  });
+  
+</script>
+</body>
+</html>
